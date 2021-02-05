@@ -1,7 +1,7 @@
 create table transactions (
     created_at timestamp,
     browser text,
-    postalcode integer,
+    postal_code integer,
     cardprovider text,
     cryptocurrency text,
     latitude numeric(10,7),
