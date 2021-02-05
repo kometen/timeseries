@@ -8,7 +8,6 @@ Random data is created using the Python package Faker.
 <br />
 Save the output to a file:
 <br />
-<br />
 `python3 ./gen_data.py > faker_data.csv`
 <br />
 <br />
@@ -18,7 +17,6 @@ Save the output to a file:
 <br />
 <br />
 Create the table in psql.
-<br />
 <br />
 `create table transaction ( ... );`
 <br />
