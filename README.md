@@ -1,3 +1,7 @@
 # timeseries
 I want to learn about timeseries using timescaledb for postgresql <br />
-Timescaledb: https://www.timescale.com/
+Timescaledb: https://www.timescale.com/ <br />
+<br />
+Random data is created using the Python package Faker.<br />
+Save the output to a file:<br />
+`python3 ./gen_data.py > faker_data.csv`
