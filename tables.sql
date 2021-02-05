@@ -53,5 +53,5 @@ create table transactions (
     place_name text,
     country_code text,
     time_zone text,
-    obs_uid uuid,
+    uuid uuid
 );
