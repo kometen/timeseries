@@ -1,7 +1,7 @@
 select
   time_bucket('12 hours', created_at) as twelve_hrs,
   postal_code,
-  count(*),
+  count(*)
 from
   transactions
 group by
