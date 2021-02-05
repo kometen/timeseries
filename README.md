@@ -26,3 +26,6 @@ Create the table in psql.
 `select create_hypertable('transactions', 'created_at');`
 <br />
 <br />
+Copy the csv-file to the table.
+<br />
+`\copy transactions from '/Users/claus/devel/python/faker_data.csv' csv delimiter ';'`
