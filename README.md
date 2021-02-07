@@ -29,3 +29,13 @@ Create the table in psql.
 Copy the csv-file to the table.
 <br />
 `\copy transactions from '/Users/claus/devel/python/faker_data.csv' csv delimiter ';'`
+<br />
+<br />
+Another example is using crypto currency data freely downloadable from https://www.cryptodatadownload.com/
+<br />
+The first line in the CSV is information and must be deleted.
+<br />
+UNIX-time and date is redundant but I just kept it. UNIX-time is sometimes in milliseconds. This can be
+<br />
+fixed in vim with `%s/\(\d\{10}\)\(000\)/\1/`.
+<br />
