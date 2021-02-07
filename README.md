@@ -37,5 +37,9 @@ The first line in the CSV is information and must be deleted.
 <br />
 UNIX-time and date is redundant but I just kept it. UNIX-time is sometimes in milliseconds. This can be
 <br />
-fixed in vim with `%s/\(\d\{10}\)\(000\)/\1/`.
+fixed in vim with `:%s/\(\d\{10}\)\(000\)/\1/`.
 <br />
+<br />
+Then import it with
+<br />
+`\copy crypto_currency from '/Users/claus/Downloads/gemini_ZECUSD_2018_1min.csv' csv delimiter ',' header`
