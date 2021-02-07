@@ -42,9 +42,6 @@ fixed in vim with `:%s/\(\d\{10}\)\(000\)/\1/`.
 <br />
 `create table crypto_currency ( ... );`
 <br />
-<br />
 `select create_hypertable('crypto_currency', 'created_at');`
-<br />
-Then import it with
 <br />
 `\copy crypto_currency from '/Users/claus/Downloads/gemini_ZECUSD_2018_1min.csv' csv delimiter ',' header`
