@@ -51,31 +51,3 @@ order by
   symbol desc,
   ten_minutes desc
 ;
-
--- Sum per year (ytd).
-with data as (
-select
-  '2018' as year,
-  extract(month from time_bucket('1 day', created_at)) as month,
-  symbol,
-  first(open, created_at) as open,
-  max(high) as high,
-  min(low) as low,
-  last(close, created_at) as closing,
-  sum(volume) as volume
-from
-  crypto_currency
-where
-  created_at > '2018-01-01' and created_at < '2019-01-01'
-group by
-  month,
-  symbol
-order by
-  symbol,
-  month
-)
-
-select
-  *,
-  sum(volume) over (order by symbol, month rows between unbounded preceding and current row) as ytd
-from data;
