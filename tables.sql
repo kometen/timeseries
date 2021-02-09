@@ -9,7 +9,12 @@ create table transactions (
     place_name text,
     country_code text,
     time_zone text,
-    uuid uuid
+    uuid uuid,
+    open integer,
+    high integer,
+    low integer,
+    close integer,
+    volume integer
 );
 
 create table crypto_currency (
