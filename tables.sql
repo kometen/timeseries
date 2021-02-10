@@ -3,7 +3,7 @@ create table transactions (
     browser text,
     postal_code integer,
     cardprovider text,
-    cryptocurrency text,
+    crypto_currency text,
     latitude numeric(10,7),
     longitude numeric(10,7),
     place_name text,
