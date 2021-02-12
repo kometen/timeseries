@@ -27,10 +27,11 @@ from
 where
   created_at > '2018-01-01' and created_at < '2019-01-01'
 group by
+  year,
   month,
-  symbol
+  crypto_currency
 order by
-  symbol,
+  crypto_currency,
   month
 )
 
