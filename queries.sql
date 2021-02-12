@@ -11,6 +11,35 @@ order by
   count desc
 ;
 
+
+with data as (
+select
+  extract(year from created_at) as year,
+  extract(month from time_bucket('1 day', created_at)) as month,
+  crypto_currency,
+  first(open, created_at) as open,
+  max(high) as high,
+  min(low) as low,
+  last(close, created_at) as closing,
+  sum(volume) as volume
+from
+  transactions
+where
+  created_at > '2018-01-01' and created_at < '2019-01-01'
+group by
+  month,
+  symbol
+order by
+  symbol,
+  month
+)
+
+select
+  *,
+  sum(volume) over (partition by crypto_currency order by crypto_currency, month rows between unbounded preceding and current row) as ytd
+from data;
+
+
 -- Get opening, closing, low, high, sum per day.
 select
   time_bucket('1 day', created_at) as one_day,
